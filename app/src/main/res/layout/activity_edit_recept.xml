@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".EditRecept">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Редактирование рецепта"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/dishName"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:ems="12"
+                android:inputType="text"
+                android:hint="Название блюда" />
+
+            <EditText
+                android:id="@+id/kitchen"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:ems="12"
+                android:hint="Чья кухня?"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:ems="12"
+                android:hint="Короткое описание"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/steps"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:ems="12"
+                android:hint="Шаги приготовления"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/path_to_image"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:ems="12"
+                android:inputType="text"
+                android:hint="Ссылка на картинку" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/idProduct"
+                android:layout_width="200dp"
+                android:contentDescription="Добавляет поле"
+                android:layout_height="50dp"
+                android:text="Добавить продукт"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:onClick="addNewEditText"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prodConteiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp">
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <android.widget.Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="#9B84C8"
+                android:onClick="editRecept"
+                android:text="Обновить" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
